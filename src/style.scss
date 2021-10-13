@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap");
+$header-color: #5e454b;
+$search-color: #fef1e6;
+$text-color: #444941;
+$date-color: #444941;
+$status-color: #297f87;
+$temp-color: #334756;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+body {
+  background-image: url("./assets/back.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.base-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.header {
+  margin-top: 40px;
+  text-align: center;
+  color: $header-color;
+  font-size: 52px;
+  font-family: "Libre Baskerville", serif;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+//Weather
+.weather {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  font-family: sans-serif;
+  &-day {
+    width: 100%;
+    height: 140px;
+    margin-top: 10px;
+    background: white;
+    opacity: 0.7;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    img {
+      width: 50px;
+      height: 50px;
+      display: block;
+      margin: auto;
+    }
+  }
+  &-date,
+  &-status,
+  &-max,
+  &-min {
+    text-align: center;
+    list-style: none;
+    margin-bottom: 5px;
+  }
+  &-date {
+    color: $date-color;
+    font-size: 22px;
+    margin-top: 10px;
+  }
+  &-status {
+    text-transform: uppercase;
+    color: $status-color;
+    font-weight: bold;
+  }
+
+  &-max,
+  &-min {
+    width: 50%;
+    color: $temp-color;
+    font-size: 18px;
+  }
+  &-max {
+    float: left;
+  }
+  &-min {
+    float: right;
+  }
+}
+//days
+.days-container {
+  width: 80%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+//search
+
+.search {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  &-input {
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    font-size: 24px;
+    padding: 22px 18px;
+    border-radius: 10px;
+    border: none;
+    background-color: $search-color;
+    color: $text-color;
+  }
+}
